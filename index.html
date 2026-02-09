@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Meteorologia</title>
+</head>
+<header>
+    <div class="trilho" id="trilho">
+        <div class="indicador" id="indicador"></div>
+    </div>
+</header>
+<body>
+    <main id="container" class="container">
+
+        <div id="container-input" class="container-input">
+            <input type="text" id="cityName" class="cityName" placeholder="Digite sua cidade" aria-label="Nome da cidade">
+            <input type="button" value="Pesquisar" id="btnSearch" class="btnSearch" aria-label="Pesquisar cidade">
+        </div>
+
+        <div id="container-title" class="container-title hide">
+            <img id="loading-nameCity" src="images/loading.png" alt="Carregando..." class="loading hide">
+            <h1 id="titleNameCity"></h1>
+            <img src="images/location.png" alt="Icone de Localização" class="img-loc">
+        </div>
+
+        <div id="container-ceu" class="container-ceu hide ">
+            <span id="ceu" class="ceu"></span>
+            <br>
+            <img id="loading-ceuStats" src="images/loading.png" alt="Carregando..." class="loading hide">
+            <img id="imgClima" src="" alt="Imagem do clima" class="imgClima">
+        </div>
+
+        <div class="container-clima hide" id="container-clima">
+
+            <div class="container-temp">
+                <p>Temperatura</p>
+
+                <div class="container-tempCeF">
+                    <span id="tempC" class="tempC"></span>
+                    <img id="loading-tempC" src="images/loading.png" alt="Carregando..." class="loading hide">
+
+                    <span id="tempF" class="tempF"></span>
+                    <img id="loading-tempF" src="images/loading.png" alt="Carregando..." class="loading hide">
+                </div>
+            </div>
+
+            <div class="container-vento">
+            <p>Ventos</p>
+                <span id="vento" class="vento"></span>
+                <img id="loading-vento" src="images/loading.png" alt="Carregando..." class="loading hide">
+                <span>km/h</span>
+            </div>
+
+            <div class="container-umidade">
+                <p>Umidade</p>
+                <span id="umidade" class="umidade"></span>
+                <img id="loading-umidade" src="images/loading.png" alt="Carregando..." class="loading hide">
+                <span>%</span>
+            </div>
+
+        </div>
+
+        <img id="loading" src="images/loading.png" alt="Carregando..." class="loading hide">
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
